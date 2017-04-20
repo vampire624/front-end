@@ -1,0 +1,49 @@
+/* CSS Document */
+*{ padding:0; margin:0}
+
+#header{ width:505px; height:24px; position:absolute; top:0; right:0; padding-top:24px;}
+
+#header ul{ list-style-type:none;}
+#header ul li{ font-size:14px; float:left; display:inline-block;  height:24px; line-height:24px;}
+#header .nav ul li+li{ margin-left:22px;}
+#header .nav li:last-child{ margin-left:22px; text-align:center; background-color:rgba(51,136,255,1.0); }
+#header ul li a{ color:#000; text-decoration:underline;}
+#header ul li a.bold{ font-weight:bold;}
+#header .nav>ul li:last-child{ position:relative;}
+#header .nav>ul li:last-child a{ color:#FFF; text-decoration:none; padding:8px; text-decoration:none;}
+#header .nav>ul li:last-child:hover :before{ content:""; width:10px; height:48px; border-left:1px  rgba(231,231,231,1.0) solid; position:absolute; left:-11px; top:-24px;}
+#header .nav>ul li:last-child:hover a{ color:#000;}
+#header .nav>ul li:last-child:hover{ background-color:#FFF;}
+
+#header div:last-child{ width:85px; height:720px; border-left:1px  rgba(231,231,231,1.0) solid; background-color:rgba(249,249,249,1.0); position:absolute; right:0; top:48px; display:none; }
+#header div:last-child ul li{ display:block; height:46px; width:80px; text-align:center;}
+#header div:last-child ul li+li{ border-top:1px solid rgba(240,240,240,1.0); margin:10px auto; padding-top:10px;}
+#header div:last-child ul li:first-child{ padding:15px 0;}
+#header div:last-child ul li a { text-decoration:none;}
+#header div:last-child ul li a span{ margin:0 auto;}
+#header div:last-child ul li:nth-child(1) span{ background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/logos/bdbri_icons_0a62ce1.png) no-repeat; background-position:0 0; display:block; width:36px; height:36px;}
+#header div:last-child ul li:nth-child(2) span{ background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/logos/bdbri_icons_0a62ce1.png) no-repeat; background-position:-72px 0; display:block; width:40px; height:36px;}
+#header div:last-child ul li:nth-child(3) span{ background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/logos/bdbri_icons_0a62ce1.png) no-repeat; background-position:-112px 0; display:block; width:36px; height:36px;}
+#header div:last-child ul li:nth-child(4) span{ background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/logos/bdbri_icons_0a62ce1.png) no-repeat; background-position:-36px 0; display:block; width:36px; height:36px;}
+#header div:last-child ul li:nth-child(5) span{ background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/logos/bdbri_icons_0a62ce1.png) no-repeat; background-position:-148px 0; display:block; width:36px; height:36px;}
+#header div:last-child ul li:nth-child(6) span{ background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/logos/bdbri_icons_0a62ce1.png) no-repeat; background-position:-184px 0; display:block; width:36px; height:36px;}
+
+#body{ margin:120px auto 0; }
+#body>img{ margin:0 auto 30px; display:block; width:270px; height:129px;}
+#body div{ width:620px; margin:0 auto;}
+#body input{ display:inline-block; height:33px; width:500px; font-size:18px; }
+#body .btn{ display:inline-block; color:#FFF; background-color:rgba(51,133,255,1.0); width:110px; height:38px; line-height:40px; text-align:center; margin-left:-8px; padding-bottom:1px;}
+
+#QRcode{ margin:270px auto 0;}
+#QRcode div:first-child{ width:60px; height:60px; background:url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_efde696.png) 0 0 no-repeat; margin:0 auto;}
+#QRcode div:last-child{ font-weight:bolder; color:#666; font-size:12px; line-height:23px; margin:0 auto; width:55px; font-family:Arial;}
+
+#footer{ margin:10px auto 0; width:640px;}
+#footer ul{ list-style-type:none;}
+#footer ul li{ float:left; display:inline-block;  font-size:12px;}
+#footer ul li+li{ margin-left:20px;}
+#footer ul:first-child{ width:310px; margin:0 auto; padding-bottom:20px;}
+#footer ul:last-child{ clear:both; width:500px; margin:0 auto;}
+#footer ul li a{ color:#999;}
+
+
