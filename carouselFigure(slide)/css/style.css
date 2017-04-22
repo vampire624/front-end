@@ -1,0 +1,15 @@
+/* CSS Document */
+*{ padding:0; margin:0;}
+	#main{ width:1000px; margin: 50px auto; position:relative; overflow:hidden; height:563px;}
+	#main:hover #backward{width:50px; height:100px; position:absolute; left:0; top:231px; background-color:rgba(0,0,0,0.1); z-index:10; cursor:pointer; }
+	#main:hover #forward{width:50px; height:100px; position:absolute; left:950px; top:231px; background-color:rgba(0,0,0,0.1); z-index:10; cursor:pointer; }
+	#main>ul{ list-style-type:none; display:block; position:absolute; top:0; left:0; width:4000px;}
+	#main>ul li{ display:block; float:left; width:1000px; }
+	#main>ul li img{ width:1000px; height:auto;}
+	
+	#dot{ position:absolute; left:340px; bottom:50px;}
+	#dot>ul{ list-style-type:none; width:320px; }
+	#dot>ul>li{ float:left; width:20px; height:20px; border-radius:10px; background-color:rgba(255,255,255,0.3); display:block; cursor:pointer;}
+	#dot>ul>li+li{ margin-left:80px;}
+	#dot>ul>li.active{ box-shadow:0 0 10px #CCC; background-color:rgba(255,102,51,0.5);}
+
