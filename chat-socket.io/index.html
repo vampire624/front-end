@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>socket.io-Chat-test</title>
+	<style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+</head>
+<body>
+	<ul id="messages"></ul>
+    <form action="" onsubmit="return false">
+      <input id="m" autocomplete="off" /><button type="button">Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+	<script>
+	  $(function(){
+	  	var nickName = prompt("please inupt your nick name!","")
+	  	var socket = io()
+	  	$("button").click(function(){
+	  		socket.emit("chat",nickName + ": "+ $("#m").val())
+	  		$("#m").val("")
+	  		return false
+	  	})
+	  	$(document).on("keyup",function(event) {
+	  		/* Act on the event */
+	  		if(event.keyCode === 13){
+	  			socket.emit("chat",nickName + ": "+ $("#m").val())
+	  			$("#m").val("")
+	  			return false
+	  		}
+	  	});
+	  	socket.on("chat",function(msg){
+	  		// if(msg.split(":")[0] != nickName){
+	  		// 	var $li = "<li></li>"
+	  		// 	$("#messages").append($($li).text(msg))	
+	  		// }
+	  		var $li = "<li></li>"
+	  		$("#messages").append($($li).text(msg))
+	  	})
+	  })
+	</script>
+</body>
+</html>

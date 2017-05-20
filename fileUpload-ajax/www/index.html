@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fileUpload</title>
+</head>
+<body>
+		<form enctype="multipart/form-data" id="Form">
+			<input type="file" name="upload">
+			<input type="text" name="text">
+			<textarea name="textarea"></textarea>
+			<input type="password" name="password">
+			male:<input type="radio" value="male" name="gender">
+			female:<input type="radio" value="female" name="gender">
+			apple:<input type="checkbox" name="apple" value="apple">
+			banana:<input type="checkbox" name="banana" value="banana">
+			<select name="select">
+				<option name ="1">1</option>
+				<option name ="2">2</option>
+				<option name ="3">3</option>
+			</select>
+			<input type="button" value="upload" id="upload">
+		</form>
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#upload").click(function(){
+					var form = new FormData($("form")[0])
+					$.ajax({
+						url:"../file-upload",
+						type:"post",
+						data:form,
+						processData:false,
+						contentType:false,
+						success:function(data){
+							alert(data.attr)
+						},
+						error:function(error){
+							console.log(error)
+						}
+					})
+				})
+			})
+		</script>
+</body>
+</html>
