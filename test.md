@@ -5,7 +5,7 @@
 
 	This is second paregraph for testing use!
 
-###header 3
+### header 3
 
 > ## this is header 2 in the blockquote
 > this is a blockquote
@@ -14,10 +14,11 @@
 
 this is emphasized **content** or __other content__.
 and this is [baidu](http://www.baidu.com "this is title") link
+
 ![alt picture](/*/*.png "this is title")
 
 ``` bash 
-$ sudo vi */*.* 
+$ npm install webpack --save-dev
 
 ```
 this is a `<a href="##" title="#">a标签</a>` usage
